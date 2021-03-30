@@ -1,0 +1,20 @@
+{
+	"name": "mmt-cart-api",
+	"author": "Magicmind Technologies Product Team",
+	"version": "1.0.0",
+	"description": "MMT Cart API",
+	"main": "server.js",
+	"scripts": {
+		"dev": "nodemon server.js",
+		"start": "node server.js",
+		"prepare": "husky install"
+	},
+	"homepage": "https://github.com/Zencast-Media/mmt-cart/blob/master/README.md",
+	"license": "ISC",
+	"dependencies": {
+		"joi": "^17.4.0",
+		"sequelize": "^6.5.0",
+		"sqlite3": "^5.0.2",
+		"uuid": "^8.3.2"
+	}
+}
