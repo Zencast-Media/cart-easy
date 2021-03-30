@@ -12,7 +12,7 @@ const {
 
 cart.addCart = async (content, globalConditions, userId) => {
 	await db.sequelize.sync();
-	addCart(content, globalConditions, userId);
+	return addCart(content, globalConditions, userId);
 };
 
 cart.getCart = async userId => {
