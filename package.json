@@ -7,7 +7,14 @@
 		"cart",
 		"e-commerce",
 		"shop",
-		"checkout"
+		"checkout",
+		"pos",
+		"sales",
+		"purchase",
+		"buy",
+		"bag",
+		"shopping",
+		"ecommerce"
 	],
 	"main": "index.js",
 	"scripts": {
