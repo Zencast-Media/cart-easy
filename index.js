@@ -5,7 +5,7 @@ const {
 	getCart,
 	updateCart,
 	deleteCart,
-	updateItemQuantity,
+	updateItemMultiplier,
 	removeCondition,
 } = require('./lib/controllers/cart.controller');
 
@@ -29,9 +29,9 @@ exports.deleteCart = async userId => {
 	return deleteCart(userId);
 };
 
-exports.updateItemQuantity = async (userId, _itemId, quantity) => {
+exports.updateItemMultiplier = async (userId, _itemId, multiplier) => {
 	await db.sequelize.sync();
-	return updateItemQuantity(userId, _itemId, quantity);
+	return updateItemMultiplier(userId, _itemId, multiplier);
 };
 
 exports.removeCondition = async (userId, _itemId, _conditionId) => {
