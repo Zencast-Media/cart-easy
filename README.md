@@ -31,8 +31,8 @@
    - **_conditions_** : The set of conditions to be applied to the cart item (optional). Detailed description can be found below.
      > Note: Any other data is also accepted as per the User's requirment and will not affect the cart calculations.
 3. **condition** : A set of properties that affects that price of an Item present int he cart. A condtion can be expressed as an **absolute** value or in _percentage_. There can be 2 types of conditions:
-   1. **_global_**: A set of condtions that is applied on the **cart subtotal**. If **more than 1** of them are present, then a **rank** property with a **value (>0)** must be present in the global condition to assign their priority in the cart calculations.
-   2. **_item conditions_**: A set of conditions that is applied on the **price of a cart item**. If you ever want an item condition to act **globally**, then an **isGlobal** property with **true** as boolean value must be passed which will require you to pass a **rank** property with a **value (>0)**, otherwise just pass **isGlobal** property with a **false** boolean value. > **Note:**
+   1. **_global condition_**: A set of condtions that is applied on the **cart subtotal**. If **more than 1** of them are present, then a **rank** property with a **value (>0)** must be present in the global condition to assign their priority in the cart calculations.
+   2. **_item condition_**: A set of conditions that is applied on the **price of a cart item**. If you ever want an item condition to act **globally**, then an **isGlobal** property with **true** as boolean value must be passed which will require you to pass a **rank** property with a **value (>0)**, otherwise just pass **isGlobal** property with a **false** boolean value. > **Note:**
       If **multiple ranked conditions** have the same rank, then their **order** in the request body will be followed during calculations.
       > **Note:** Both global and item conditions are **optional** and can be avoioded.
       > Any **other data** is also accepted as per the User's requirement but will not affect the cart calculations.
@@ -58,9 +58,9 @@ const globalConditions = [
 		name: 'Condition 1', // Condition name is required
 		type: 'Anyting', // Depends on the Business
 		value: 100, // A positive value is required
-		action: 'ADD', // action can be one of "ADD" or "SUB" is                                   required
-		isPercentage: false, // isPercentage can be true or false and is                                  required
-		rank: 2, // rank is required when multiple globally                               applicable conditions are present
+		action: 'ADD', // action can be one of "ADD" or "SUB" is required
+		isPercentage: false, // isPercentage can be true or false and is required
+		rank: 2, // rank is required when multiple globally applicable conditions are present
 	},
 	{
 		name: 'Condition 2',
