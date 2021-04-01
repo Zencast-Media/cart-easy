@@ -129,7 +129,7 @@ const content = [
 > **\_itemId** to every item inside the content while cart creation.
 > **\_conditionId** to every condition while cart creation.
 
-## #Sample Cart Reponse
+## Sample Cart Reponse
 
 ```javascript
 {
