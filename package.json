@@ -1,5 +1,5 @@
 {
-	"name": "cartify",
+	"name": "cart-easy",
 	"author": "Magicmind Technologies Limited",
 	"version": "1.0.0",
 	"description": "A generic solution towards implementing a cart in your e-commerce application",
@@ -23,13 +23,13 @@
 		"dev": " node index.js",
 		"start": "node index.js"
 	},
-	"homepage": "https://github.com/Zencast-Media/cartify/blob/main/README.md",
+	"homepage": "https://github.com/Zencast-Media/cart-easy/blob/main/README.md",
 	"repository": {
 		"type": "git",
-		"url": "https://github.com/Zencast-Media/cartify.git"
+		"url": "https://github.com/Zencast-Media/cart-easy.git"
 	},
 	"bugs": {
-		"url": "https://github.com/Zencast-Media/cartify/issues"
+		"url": "https://github.com/Zencast-Media/cart-easy/issues"
 	},
 	"license": "MIT",
 	"dependencies": {
