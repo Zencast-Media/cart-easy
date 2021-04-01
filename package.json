@@ -14,7 +14,9 @@
 		"buy",
 		"bag",
 		"shopping",
-		"ecommerce"
+		"ecommerce",
+		"storefront",
+		"cart-managment"
 	],
 	"main": "index.js",
 	"scripts": {
