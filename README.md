@@ -2,8 +2,7 @@
 
 > A **generic solution** towards implementing a cart in your e-commerce application.
 > This library has been created with **ES6+ Javascript & uses SQLite 3** as its database.
-> It is meant to be used as a **pluggable library** that caters any Javascript application
-> seeking to intergate **Cart** functionality
+> It is meant to be used as a **pluggable library** that caters any Javascript application seeking to intergate **Cart** functionality.
 
 ## Installation
 
@@ -31,10 +30,12 @@
    - **_multiplier_** : Quantity of the cart item (required).
    - **_conditions_** : The set of conditions to be applied to the cart item (optional). Detailed description can be found below.
      > Note: Any other data is also accepted as per the User's requirment and will not affect the cart calculations.
-3. **condition** : A set of properties that affects that price of an Item present int he cart. A condtion can be expressed as an **absolute** value or in _percentage_. There can be 2 types of conditions: 1. **_global_**: A set of condtions that is applied on the cart subtotal. If more than 1 of them are present, then a **rank** property with a **value(>0)** must be present in the global condition to assign their priority in the cart calculations. 2. **_item conditions_**: A set of conditions that is applied on the price of a cart item. If you ever want an item condition to act globally. then an **isGlobal** property with **true** as boolean value must be passed which will require you to pass a **rank** property with a **value(>0)**, otherwise just pass **isGlobal** property with a **false** boolean value. > **Note:**
-   If **multiple ranked conditions** have the same rank, then their **order** in the request body will be followed during calculations.
-   Both global and item conditions are optional and can be avoioded.
-   Any other data is also accepted as per the User's requirment but would not affect the cart calculations.
+3. **condition** : A set of properties that affects that price of an Item present int he cart. A condtion can be expressed as an **absolute** value or in _percentage_. There can be 2 types of conditions:
+   1. **_global_**: A set of condtions that is applied on the **cart subtotal**. If **more than 1** of them are present, then a **rank** property with a **value (>0)** must be present in the global condition to assign their priority in the cart calculations.
+   2. **_item conditions_**: A set of conditions that is applied on the **price of a cart item**. If you ever want an item condition to act **globally**, then an **isGlobal** property with **true** as boolean value must be passed which will require you to pass a **rank** property with a **value (>0)**, otherwise just pass **isGlobal** property with a **false** boolean value. > **Note:**
+      If **multiple ranked conditions** have the same rank, then their **order** in the request body will be followed during calculations.
+      > **Note:** Both global and item conditions are **optional** and can be avoioded.
+      > Any **other data** is also accepted as per the User's requirement but will not affect the cart calculations.
 
 ## Import
 
@@ -224,11 +225,14 @@ const content = [
 
 All cart-easy functions return a **promise**.
 
+```javascript
+const cart = require('cart-easy');
+```
+
 #### Creating a Cart
 
 ```javascript
-const cart = require('cart-easy');
-// Refer the Sample Request above
+// Refer to the Sample Request above
 cart
 	.createCart(content, globalConditions, userId)
 	.then(cart => console.log(cart)) // Refer to the Sample Cart Respone above
@@ -264,7 +268,7 @@ cart
 
 ### Remove a Condition
 
-#### 1. Remove an Item's condition
+#### 1. Remove an Item's condition:
 
 ```javascript
 cart
@@ -273,7 +277,7 @@ cart
 	.catch(err => console.log(err));
 ```
 
-#### 2. Remove a Global condition
+#### 2. Remove a Global condition:
 
 ```javascript
 cart
