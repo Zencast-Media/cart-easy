@@ -9,7 +9,7 @@ const {
 	removeCondition,
 } = require('./lib/controllers/cart.controller');
 
-exports.addCart = async (content, globalConditions, userId) => {
+exports.createCart = async (content, globalConditions, userId) => {
 	await db.sequelize.sync();
 	return addCart(content, globalConditions, userId);
 };
