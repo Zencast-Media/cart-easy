@@ -1,5 +1,7 @@
-// const nodeexternals = require('webpack-node-externals');
+const fs = require('fs');
 
 module.exports = {
-	externals: ['pg', 'tedious', 'pg-hstore', 'mysql'],
+	entry: './index.js',
+	target: 'node',
+	externals: fs.readdirSync('node_modules').filter(x => x !== '.bin'),
 };
