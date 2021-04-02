@@ -2,7 +2,7 @@
 
 > A **generic solution** towards implementing a cart in your e-commerce application.
 > This library has been created with **ES6+ Javascript & uses SQLite 3** as its database.
-> It is meant to be used as a **pluggable library** that caters any Javascript application seeking to intergate **Cart** functionality.
+> It is meant to be used in the **backend** as a **pluggable Node.js library** that caters any Node.js application seeking to intergate **Cart** functionality into their backend.
 
 ## Installation
 
