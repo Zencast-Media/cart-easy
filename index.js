@@ -1,4 +1,4 @@
-const db = require('./lib/database/db');
+const { sequelize } = require('./lib/database/db');
 
 const {
 	addCart,
@@ -10,31 +10,31 @@ const {
 } = require('./lib/controllers/cart.controller');
 
 exports.createCart = async (content, globalConditions, userId) => {
-	await db.sequelize.sync();
+	await sequelize.sync();
 	return addCart(content, globalConditions, userId);
 };
 
 exports.getCart = async userId => {
-	await db.sequelize.sync();
+	await sequelize.sync();
 	return getCart(userId);
 };
 
 exports.updateCart = async (content, globalConditions, userId) => {
-	await db.sequelize.sync();
+	await sequelize.sync();
 	return updateCart(content, globalConditions, userId);
 };
 
 exports.deleteCart = async userId => {
-	await db.sequelize.sync();
+	await sequelize.sync();
 	return deleteCart(userId);
 };
 
 exports.updateItemMultiplier = async (userId, _itemId, multiplier) => {
-	await db.sequelize.sync();
+	await sequelize.sync();
 	return updateItemMultiplier(userId, _itemId, multiplier);
 };
 
 exports.removeCondition = async (userId, _itemId, _conditionId) => {
-	await db.sequelize.sync();
+	await sequelize.sync();
 	return removeCondition(userId, _itemId, _conditionId);
 };
